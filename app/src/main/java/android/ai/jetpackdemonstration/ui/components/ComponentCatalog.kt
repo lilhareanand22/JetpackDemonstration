@@ -59,6 +59,41 @@ object ComponentCatalog {
             id = "scaffold",
             name = "Scaffold",
             category = ComponentCategory.AppBarsAndNavigation
+        ),
+        ComponentItem(
+            id = "card",
+            name = "Card",
+            category = ComponentCategory.CardsAndLists
+        ),
+        ComponentItem(
+            id = "list_item",
+            name = "ListItem",
+            category = ComponentCategory.CardsAndLists
+        ),
+        ComponentItem(
+            id = "divider",
+            name = "Divider",
+            category = ComponentCategory.CardsAndLists
+        ),
+        ComponentItem(
+            id = "lazy_lists",
+            name = "LazyColumn & LazyRow",
+            category = ComponentCategory.CardsAndLists
+        ),
+        ComponentItem(
+            id = "lazy_grid",
+            name = "LazyVerticalGrid",
+            category = ComponentCategory.CardsAndLists
+        ),
+        ComponentItem(
+            id = "pager",
+            name = "HorizontalPager & VerticalPager",
+            category = ComponentCategory.CardsAndLists
+        ),
+        ComponentItem(
+            id = "carousel",
+            name = "Carousel",
+            category = ComponentCategory.CardsAndLists
         )
     )
 

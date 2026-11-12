@@ -2,11 +2,18 @@ package android.ai.jetpackdemonstration.ui.components
 
 import android.ai.jetpackdemonstration.ui.components.demos.BottomAppBarDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.ButtonDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.CardDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.CarouselDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.DividerDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.FloatingActionButtonDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.IconButtonDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.LazyGridDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.LazyListsDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.ListItemDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.NavigationBarDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.NavigationDrawerDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.NavigationRailDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.PagerDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.ScaffoldDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.SegmentedButtonDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.TabsDemoScreen
@@ -62,6 +69,13 @@ fun ComponentDetailScreen(
             "navigation_drawer" -> NavigationDrawerDemoScreen(contentModifier)
             "tabs" -> TabsDemoScreen(contentModifier)
             "scaffold" -> ScaffoldDemoScreen(contentModifier)
+            "card" -> CardDemoScreen(contentModifier)
+            "list_item" -> ListItemDemoScreen(contentModifier)
+            "divider" -> DividerDemoScreen(contentModifier)
+            "lazy_lists" -> LazyListsDemoScreen(contentModifier)
+            "lazy_grid" -> LazyGridDemoScreen(contentModifier)
+            "pager" -> PagerDemoScreen(contentModifier)
+            "carousel" -> CarouselDemoScreen(contentModifier)
         }
     }
 }
