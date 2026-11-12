@@ -1,5 +1,6 @@
 package android.ai.jetpackdemonstration.ui.navigation
 
+import android.ai.jetpackdemonstration.ui.components.ComponentDetailScreen
 import android.ai.jetpackdemonstration.ui.components.ComponentsScreen
 import android.ai.jetpackdemonstration.ui.sideeffects.SideEffectsScreen
 import android.ai.jetpackdemonstration.ui.state.StateScreen
@@ -20,6 +21,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.toRoute
 
 @Composable
 fun JetpackDemoApp() {
@@ -70,13 +72,24 @@ fun JetpackDemoApp() {
             modifier = Modifier.padding(innerPadding)
         ) {
             composable<ComponentsRoute> {
-                ComponentsScreen()
+                ComponentsScreen(
+                    onComponentClick = { componentId ->
+                        navController.navigate(ComponentDetailRoute(componentId))
+                    }
+                )
             }
             composable<StateRoute> {
                 StateScreen()
             }
             composable<SideEffectsRoute> {
                 SideEffectsScreen()
+            }
+            composable<ComponentDetailRoute> { backStackEntry ->
+                val route = backStackEntry.toRoute<ComponentDetailRoute>()
+                ComponentDetailScreen(
+                    componentId = route.componentId,
+                    onBack = { navController.popBackStack() }
+                )
             }
         }
     }
