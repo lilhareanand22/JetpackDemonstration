@@ -3,6 +3,7 @@ package android.ai.jetpackdemonstration.ui.components
 import android.ai.jetpackdemonstration.ui.components.demos.BadgeDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.BottomAppBarDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.BottomSheetDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.BoxDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.ButtonDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.CardDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.CarouselDemoScreen
@@ -12,7 +13,9 @@ import android.ai.jetpackdemonstration.ui.components.demos.DatePickerDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.DialogDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.DividerDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.FloatingActionButtonDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.FlowLayoutsDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.IconButtonDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.ImageAndIconDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.LazyGridDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.LazyListsDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.ListItemDemoScreen
@@ -24,13 +27,16 @@ import android.ai.jetpackdemonstration.ui.components.demos.PagerDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.ProgressIndicatorDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.PullToRefreshDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.RadioButtonDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.RowAndColumnDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.ScaffoldDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.SearchBarDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.SegmentedButtonDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.SliderDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.SnackbarDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.SurfaceDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.SwitchDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.TabsDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.TextDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.TextFieldDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.TimePickerDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.TooltipDemoScreen
@@ -110,6 +116,12 @@ fun ComponentDetailScreen(
             "pull_to_refresh" -> PullToRefreshDemoScreen(contentModifier)
             "date_picker" -> DatePickerDemoScreen(contentModifier)
             "time_picker" -> TimePickerDemoScreen(contentModifier)
+            "text" -> TextDemoScreen(contentModifier)
+            "image_icon" -> ImageAndIconDemoScreen(contentModifier)
+            "box" -> BoxDemoScreen(contentModifier)
+            "row_column" -> RowAndColumnDemoScreen(contentModifier)
+            "flow_layouts" -> FlowLayoutsDemoScreen(contentModifier)
+            "surface" -> SurfaceDemoScreen(contentModifier)
         }
     }
 }

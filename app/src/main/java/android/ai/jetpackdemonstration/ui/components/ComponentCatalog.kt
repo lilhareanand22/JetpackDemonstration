@@ -179,6 +179,36 @@ object ComponentCatalog {
             id = "time_picker",
             name = "TimePicker & TimeInput",
             category = ComponentCategory.DateAndTime
+        ),
+        ComponentItem(
+            id = "text",
+            name = "Text & AnnotatedString",
+            category = ComponentCategory.LayoutsAndCore
+        ),
+        ComponentItem(
+            id = "image_icon",
+            name = "Image & Icon",
+            category = ComponentCategory.LayoutsAndCore
+        ),
+        ComponentItem(
+            id = "box",
+            name = "Box",
+            category = ComponentCategory.LayoutsAndCore
+        ),
+        ComponentItem(
+            id = "row_column",
+            name = "Row & Column",
+            category = ComponentCategory.LayoutsAndCore
+        ),
+        ComponentItem(
+            id = "flow_layouts",
+            name = "FlowRow & FlowColumn",
+            category = ComponentCategory.LayoutsAndCore
+        ),
+        ComponentItem(
+            id = "surface",
+            name = "Surface",
+            category = ComponentCategory.LayoutsAndCore
         )
     )
 
