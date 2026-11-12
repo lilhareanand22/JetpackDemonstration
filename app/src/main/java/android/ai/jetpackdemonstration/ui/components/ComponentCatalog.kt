@@ -134,6 +134,51 @@ object ComponentCatalog {
             id = "menus",
             name = "DropdownMenu & ExposedDropdownMenu",
             category = ComponentCategory.InputsAndSelection
+        ),
+        ComponentItem(
+            id = "dialog",
+            name = "AlertDialog & Dialog",
+            category = ComponentCategory.DialogsAndFeedback
+        ),
+        ComponentItem(
+            id = "bottom_sheet",
+            name = "ModalBottomSheet",
+            category = ComponentCategory.DialogsAndFeedback
+        ),
+        ComponentItem(
+            id = "snackbar",
+            name = "Snackbar",
+            category = ComponentCategory.DialogsAndFeedback
+        ),
+        ComponentItem(
+            id = "progress_indicator",
+            name = "ProgressIndicator",
+            category = ComponentCategory.DialogsAndFeedback
+        ),
+        ComponentItem(
+            id = "badge",
+            name = "Badge & BadgedBox",
+            category = ComponentCategory.DialogsAndFeedback
+        ),
+        ComponentItem(
+            id = "tooltip",
+            name = "TooltipBox",
+            category = ComponentCategory.DialogsAndFeedback
+        ),
+        ComponentItem(
+            id = "pull_to_refresh",
+            name = "PullToRefreshBox",
+            category = ComponentCategory.DialogsAndFeedback
+        ),
+        ComponentItem(
+            id = "date_picker",
+            name = "DatePicker & DateRangePicker",
+            category = ComponentCategory.DateAndTime
+        ),
+        ComponentItem(
+            id = "time_picker",
+            name = "TimePicker & TimeInput",
+            category = ComponentCategory.DateAndTime
         )
     )
 
