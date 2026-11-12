@@ -1,9 +1,16 @@
 package android.ai.jetpackdemonstration.ui.components
 
+import android.ai.jetpackdemonstration.ui.components.demos.BottomAppBarDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.ButtonDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.FloatingActionButtonDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.IconButtonDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.NavigationBarDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.NavigationDrawerDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.NavigationRailDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.ScaffoldDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.SegmentedButtonDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.TabsDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.TopAppBarDemoScreen
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -48,6 +55,13 @@ fun ComponentDetailScreen(
             "icon_button" -> IconButtonDemoScreen(contentModifier)
             "fab" -> FloatingActionButtonDemoScreen(contentModifier)
             "segmented_button" -> SegmentedButtonDemoScreen(contentModifier)
+            "top_app_bar" -> TopAppBarDemoScreen(contentModifier)
+            "bottom_app_bar" -> BottomAppBarDemoScreen(contentModifier)
+            "navigation_bar" -> NavigationBarDemoScreen(contentModifier)
+            "navigation_rail" -> NavigationRailDemoScreen(contentModifier)
+            "navigation_drawer" -> NavigationDrawerDemoScreen(contentModifier)
+            "tabs" -> TabsDemoScreen(contentModifier)
+            "scaffold" -> ScaffoldDemoScreen(contentModifier)
         }
     }
 }
