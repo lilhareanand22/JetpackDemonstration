@@ -4,19 +4,27 @@ import android.ai.jetpackdemonstration.ui.components.demos.BottomAppBarDemoScree
 import android.ai.jetpackdemonstration.ui.components.demos.ButtonDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.CardDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.CarouselDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.CheckboxDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.ChipDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.DividerDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.FloatingActionButtonDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.IconButtonDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.LazyGridDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.LazyListsDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.ListItemDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.MenusDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.NavigationBarDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.NavigationDrawerDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.NavigationRailDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.PagerDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.RadioButtonDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.ScaffoldDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.SearchBarDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.SegmentedButtonDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.SliderDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.SwitchDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.TabsDemoScreen
+import android.ai.jetpackdemonstration.ui.components.demos.TextFieldDemoScreen
 import android.ai.jetpackdemonstration.ui.components.demos.TopAppBarDemoScreen
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -76,6 +84,14 @@ fun ComponentDetailScreen(
             "lazy_grid" -> LazyGridDemoScreen(contentModifier)
             "pager" -> PagerDemoScreen(contentModifier)
             "carousel" -> CarouselDemoScreen(contentModifier)
+            "text_field" -> TextFieldDemoScreen(contentModifier)
+            "search_bar" -> SearchBarDemoScreen(contentModifier)
+            "checkbox" -> CheckboxDemoScreen(contentModifier)
+            "radio_button" -> RadioButtonDemoScreen(contentModifier)
+            "switch" -> SwitchDemoScreen(contentModifier)
+            "slider" -> SliderDemoScreen(contentModifier)
+            "chip" -> ChipDemoScreen(contentModifier)
+            "menus" -> MenusDemoScreen(contentModifier)
         }
     }
 }

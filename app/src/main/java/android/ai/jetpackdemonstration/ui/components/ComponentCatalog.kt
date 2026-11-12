@@ -94,6 +94,46 @@ object ComponentCatalog {
             id = "carousel",
             name = "Carousel",
             category = ComponentCategory.CardsAndLists
+        ),
+        ComponentItem(
+            id = "text_field",
+            name = "TextField & OutlinedTextField",
+            category = ComponentCategory.InputsAndSelection
+        ),
+        ComponentItem(
+            id = "search_bar",
+            name = "SearchBar",
+            category = ComponentCategory.InputsAndSelection
+        ),
+        ComponentItem(
+            id = "checkbox",
+            name = "Checkbox & TriStateCheckbox",
+            category = ComponentCategory.InputsAndSelection
+        ),
+        ComponentItem(
+            id = "radio_button",
+            name = "RadioButton",
+            category = ComponentCategory.InputsAndSelection
+        ),
+        ComponentItem(
+            id = "switch",
+            name = "Switch",
+            category = ComponentCategory.InputsAndSelection
+        ),
+        ComponentItem(
+            id = "slider",
+            name = "Slider & RangeSlider",
+            category = ComponentCategory.InputsAndSelection
+        ),
+        ComponentItem(
+            id = "chip",
+            name = "Chip",
+            category = ComponentCategory.InputsAndSelection
+        ),
+        ComponentItem(
+            id = "menus",
+            name = "DropdownMenu & ExposedDropdownMenu",
+            category = ComponentCategory.InputsAndSelection
         )
     )
 
