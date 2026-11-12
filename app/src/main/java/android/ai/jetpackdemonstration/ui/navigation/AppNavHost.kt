@@ -13,6 +13,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.NavHost
@@ -26,8 +27,9 @@ fun JetpackDemoApp() {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry?.destination
 
-    val topLevelRoutes = TopLevelDestination.entries.map { it.route }
-    val showBottomBar = currentDestination?.route in topLevelRoutes
+    val showBottomBar = TopLevelDestination.entries.any { destination ->
+        currentDestination?.hasRoute(destination.route::class) == true
+    }
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
@@ -36,7 +38,7 @@ fun JetpackDemoApp() {
                 NavigationBar {
                     TopLevelDestination.entries.forEach { destination ->
                         val selected = currentDestination?.hierarchy?.any {
-                            it.route == destination.route
+                            it.hasRoute(destination.route::class)
                         } == true
                         NavigationBarItem(
                             selected = selected,
@@ -64,16 +66,16 @@ fun JetpackDemoApp() {
     ) { innerPadding ->
         NavHost(
             navController = navController,
-            startDestination = TopLevelDestination.Components.route,
+            startDestination = ComponentsRoute,
             modifier = Modifier.padding(innerPadding)
         ) {
-            composable(TopLevelDestination.Components.route) {
+            composable<ComponentsRoute> {
                 ComponentsScreen()
             }
-            composable(TopLevelDestination.State.route) {
+            composable<StateRoute> {
                 StateScreen()
             }
-            composable(TopLevelDestination.SideEffects.route) {
+            composable<SideEffectsRoute> {
                 SideEffectsScreen()
             }
         }

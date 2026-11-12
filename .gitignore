@@ -13,3 +13,15 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Agentic AI tools & local configs
+.agent/
+.gemini/
+.claude/
+.codex/
+.cursor/
+.windsurf/
+.junie/
+GEMINI.md
+CLAUDE.md
+AGENTS.md

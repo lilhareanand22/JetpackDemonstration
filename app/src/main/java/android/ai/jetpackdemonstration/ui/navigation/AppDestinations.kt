@@ -8,27 +8,40 @@ import androidx.compose.material.icons.rounded.Bolt
 import androidx.compose.material.icons.rounded.Tune
 import androidx.compose.material.icons.rounded.Widgets
 import androidx.compose.ui.graphics.vector.ImageVector
+import kotlinx.serialization.Serializable
+
+@Serializable
+data object ComponentsRoute
+
+@Serializable
+data object StateRoute
+
+@Serializable
+data object SideEffectsRoute
+
+@Serializable
+data class ComponentDetailRoute(val componentId: String)
 
 enum class TopLevelDestination(
-    val route: String,
+    val route: Any,
     val label: String,
     val selectedIcon: ImageVector,
     val unselectedIcon: ImageVector
 ) {
     Components(
-        route = "components",
+        route = ComponentsRoute,
         label = "Components",
         selectedIcon = Icons.Rounded.Widgets,
         unselectedIcon = Icons.Outlined.Widgets
     ),
     State(
-        route = "state",
+        route = StateRoute,
         label = "State",
         selectedIcon = Icons.Rounded.Tune,
         unselectedIcon = Icons.Outlined.Tune
     ),
     SideEffects(
-        route = "side_effects",
+        route = SideEffectsRoute,
         label = "Side Effects",
         selectedIcon = Icons.Rounded.Bolt,
         unselectedIcon = Icons.Outlined.Bolt
