@@ -24,11 +24,6 @@ object StateTopicCatalog {
             subtitle = "mutableStateListOf & mutableStateMapOf for reactive lists"
         ),
         StateTopicItem(
-            id = "derived_state",
-            title = "derivedStateOf",
-            subtitle = "Compute derived values without redundant recompositions"
-        ),
-        StateTopicItem(
             id = "viewmodel_udf",
             title = "ViewModel + StateFlow (UDF)",
             subtitle = "Unidirectional Data Flow with collectAsStateWithLifecycle"
