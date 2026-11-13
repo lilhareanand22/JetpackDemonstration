@@ -1,6 +1,7 @@
 package android.ai.jetpackdemonstration.ui.state
 
 import android.ai.jetpackdemonstration.ui.state.demos.ObservableStateCollectionsDemo
+import android.ai.jetpackdemonstration.ui.state.demos.RecompositionScopeDemo
 import android.ai.jetpackdemonstration.ui.state.demos.RememberVsRememberSaveableDemo
 import android.ai.jetpackdemonstration.ui.state.demos.StateHoistingDemo
 import android.ai.jetpackdemonstration.ui.state.demos.ViewModelUdfDemo
@@ -52,6 +53,7 @@ fun StateDetailScreen(
             "remember_saveable" -> RememberVsRememberSaveableDemo(contentModifier)
             "state_collections" -> ObservableStateCollectionsDemo(contentModifier)
             "viewmodel_udf" -> ViewModelUdfDemo(contentModifier)
+            "recomposition_scope" -> RecompositionScopeDemo(contentModifier)
             else -> {
                 Box(
                     modifier = contentModifier.fillMaxSize(),
