@@ -1,5 +1,6 @@
 package android.ai.jetpackdemonstration.ui.state
 
+import android.ai.jetpackdemonstration.ui.state.demos.RememberVsRememberSaveableDemo
 import android.ai.jetpackdemonstration.ui.state.demos.StateHoistingDemo
 import android.ai.jetpackdemonstration.ui.state.model.StateTopicCatalog
 import androidx.compose.foundation.layout.Box
@@ -46,6 +47,7 @@ fun StateDetailScreen(
         val contentModifier = Modifier.padding(innerPadding)
         when (topicId) {
             "state_hoisting" -> StateHoistingDemo(contentModifier)
+            "remember_saveable" -> RememberVsRememberSaveableDemo(contentModifier)
             else -> {
                 Box(
                     modifier = contentModifier.fillMaxSize(),
