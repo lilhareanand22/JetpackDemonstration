@@ -1,5 +1,6 @@
 package android.ai.jetpackdemonstration.ui.sideeffects
 
+import android.ai.jetpackdemonstration.ui.sideeffects.demos.DisposableEffectDemo
 import android.ai.jetpackdemonstration.ui.sideeffects.demos.LaunchedEffectDemo
 import android.ai.jetpackdemonstration.ui.sideeffects.demos.RememberCoroutineScopeDemo
 import android.ai.jetpackdemonstration.ui.sideeffects.demos.RememberUpdatedStateDemo
@@ -50,6 +51,7 @@ fun SideEffectDetailScreen(
             "launched_effect" -> LaunchedEffectDemo(contentModifier)
             "remember_coroutine_scope" -> RememberCoroutineScopeDemo(contentModifier)
             "remember_updated_state" -> RememberUpdatedStateDemo(contentModifier)
+            "disposable_effect" -> DisposableEffectDemo(contentModifier)
             else -> {
                 Box(
                     modifier = contentModifier.fillMaxSize(),
