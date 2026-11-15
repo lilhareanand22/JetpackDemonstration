@@ -2,6 +2,7 @@ package android.ai.jetpackdemonstration.ui.navigation
 
 import android.ai.jetpackdemonstration.ui.components.ComponentDetailScreen
 import android.ai.jetpackdemonstration.ui.components.ComponentsScreen
+import android.ai.jetpackdemonstration.ui.sideeffects.SideEffectDetailScreen
 import android.ai.jetpackdemonstration.ui.sideeffects.SideEffectsScreen
 import android.ai.jetpackdemonstration.ui.state.StateDetailScreen
 import android.ai.jetpackdemonstration.ui.state.StateScreen
@@ -87,7 +88,11 @@ fun JetpackDemoApp() {
                 )
             }
             composable<SideEffectsRoute> {
-                SideEffectsScreen()
+                SideEffectsScreen(
+                    onTopicClick = { topicId ->
+                        navController.navigate(SideEffectDetailRoute(topicId))
+                    }
+                )
             }
             composable<ComponentDetailRoute> { backStackEntry ->
                 val route = backStackEntry.toRoute<ComponentDetailRoute>()
@@ -99,6 +104,13 @@ fun JetpackDemoApp() {
             composable<StateDetailRoute> { backStackEntry ->
                 val route = backStackEntry.toRoute<StateDetailRoute>()
                 StateDetailScreen(
+                    topicId = route.topicId,
+                    onBack = { navController.popBackStack() }
+                )
+            }
+            composable<SideEffectDetailRoute> { backStackEntry ->
+                val route = backStackEntry.toRoute<SideEffectDetailRoute>()
+                SideEffectDetailScreen(
                     topicId = route.topicId,
                     onBack = { navController.popBackStack() }
                 )

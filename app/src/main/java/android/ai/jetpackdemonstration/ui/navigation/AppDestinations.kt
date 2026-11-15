@@ -25,6 +25,9 @@ data class ComponentDetailRoute(val componentId: String)
 @Serializable
 data class StateDetailRoute(val topicId: String)
 
+@Serializable
+data class SideEffectDetailRoute(val topicId: String)
+
 enum class TopLevelDestination(
     val route: Any,
     val label: String,
