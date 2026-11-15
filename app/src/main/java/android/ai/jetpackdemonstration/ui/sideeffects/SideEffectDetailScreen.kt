@@ -4,6 +4,7 @@ import android.ai.jetpackdemonstration.ui.sideeffects.demos.DisposableEffectDemo
 import android.ai.jetpackdemonstration.ui.sideeffects.demos.LaunchedEffectDemo
 import android.ai.jetpackdemonstration.ui.sideeffects.demos.RememberCoroutineScopeDemo
 import android.ai.jetpackdemonstration.ui.sideeffects.demos.RememberUpdatedStateDemo
+import android.ai.jetpackdemonstration.ui.sideeffects.demos.SideEffectDemo
 import android.ai.jetpackdemonstration.ui.sideeffects.model.SideEffectTopicCatalog
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -52,6 +53,7 @@ fun SideEffectDetailScreen(
             "remember_coroutine_scope" -> RememberCoroutineScopeDemo(contentModifier)
             "remember_updated_state" -> RememberUpdatedStateDemo(contentModifier)
             "disposable_effect" -> DisposableEffectDemo(contentModifier)
+            "side_effect" -> SideEffectDemo(contentModifier)
             else -> {
                 Box(
                     modifier = contentModifier.fillMaxSize(),
