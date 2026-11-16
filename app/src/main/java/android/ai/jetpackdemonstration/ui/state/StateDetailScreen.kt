@@ -1,5 +1,6 @@
 package android.ai.jetpackdemonstration.ui.state
 
+import android.ai.jetpackdemonstration.ui.state.demos.DerivedStateDemo
 import android.ai.jetpackdemonstration.ui.state.demos.ObservableStateCollectionsDemo
 import android.ai.jetpackdemonstration.ui.state.demos.RecompositionScopeDemo
 import android.ai.jetpackdemonstration.ui.state.demos.RememberVsRememberSaveableDemo
@@ -52,6 +53,7 @@ fun StateDetailScreen(
             "state_hoisting" -> StateHoistingDemo(contentModifier)
             "remember_saveable" -> RememberVsRememberSaveableDemo(contentModifier)
             "state_collections" -> ObservableStateCollectionsDemo(contentModifier)
+            "derived_state" -> DerivedStateDemo(contentModifier)
             "viewmodel_udf" -> ViewModelUdfDemo(contentModifier)
             "recomposition_scope" -> RecompositionScopeDemo(contentModifier)
             else -> {

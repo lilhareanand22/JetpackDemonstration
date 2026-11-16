@@ -42,6 +42,11 @@ object SideEffectTopicCatalog {
             id = "snapshot_flow",
             title = "snapshotFlow",
             subtitle = "Bridge Compose State to Kotlin Flow with reactive operators"
+        ),
+        SideEffectTopicItem(
+            id = "derived_state",
+            title = "derivedStateOf",
+            subtitle = "Compute derived State to filter out high-frequency recompositions"
         )
     )
 
